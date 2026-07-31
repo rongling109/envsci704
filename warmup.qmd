@@ -1,0 +1,91 @@
+---
+title: "Lab 1 warm-up"
+format: html
+---
+
+# Hello World test
+
+```{python}
+print("Hello World")
+```
+
+# Part B: Python warm-up
+
+## 1. Variables and arithmetic
+
+```{python}
+# Calculate the volume of a rectangular estuary
+# Formula: length × width × depth
+
+length = 5000
+width = 800
+depth = 3.5
+
+volume = length * width * depth
+
+print(f"Estuary volume: {volume} m^3")
+```
+
+## 2. Lists and loops
+
+```{python}
+# Simulate 10 days of exponential population growth
+
+population = 100
+rate = 0.05
+history = [population]
+
+for day in range(10):
+    population = population + rate * population
+    history.append(round(population, 1))
+
+print(history)
+```
+
+## 3. Functions
+
+```{python}
+# Convert temperature from Celsius to Fahrenheit
+
+def celsius_to_fahrenheit(c):
+    return c * 9/5 + 32
+
+# Test the function
+
+for temp in [0, 15, 25, 37]:
+    print(f"{temp}°C = {celsius_to_fahrenheit(temp)}°F")
+```
+
+## 4. Plotting
+
+```{python}
+import matplotlib.pyplot as plt
+
+days = list(range(len(history)))
+
+plt.plot(days, history, "o-")
+plt.xlabel("Day")
+plt.ylabel("Population")
+plt.title("Exponential growth")
+plt.show()
+```
+# Part C: Modelling preview
+
+```{python}
+import matplotlib.pyplot as plt
+
+concentration = 100.0
+decay_rate = 0.1
+dt = 1.0
+tracer_history = [concentration]
+
+for day in range(60):
+    concentration = concentration - decay_rate * concentration * dt
+    tracer_history.append(concentration)
+
+plt.plot(tracer_history)
+plt.xlabel("Day")
+plt.ylabel("Concentration (mg/L)")
+plt.title("Tracer decay in a lake")
+plt.show()
+```

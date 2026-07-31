@@ -1,0 +1,8 @@
+---
+title: "My first Quarto document"
+format: html
+---
+
+```{python}
+print("Hello World")
+```

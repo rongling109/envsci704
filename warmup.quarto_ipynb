@@ -1,0 +1,146 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Lab 1 warm-up\"\n",
+        "format: html\n",
+        "---\n",
+        "\n",
+        "# Hello World test"
+      ],
+      "id": "af8cb52c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(\"Hello World\")"
+      ],
+      "id": "dd73dcce",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Part B: Python warm-up\n",
+        "\n",
+        "## 1. Variables and arithmetic"
+      ],
+      "id": "4d919f44"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# Calculate the volume of a rectangular estuary\n",
+        "# Formula: length × width × depth\n",
+        "\n",
+        "length = 5000\n",
+        "width = 800\n",
+        "depth = 3.5\n",
+        "\n",
+        "volume = length * width * depth\n",
+        "\n",
+        "print(f\"Estuary volume: {volume} m^3\")"
+      ],
+      "id": "f383f1b8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 2. Lists and loops"
+      ],
+      "id": "13efc7ae"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# Simulate 10 days of exponential population growth\n",
+        "\n",
+        "population = 100\n",
+        "rate = 0.05\n",
+        "history = [population]\n",
+        "\n",
+        "for day in range(10):\n",
+        "    population = population + rate * population\n",
+        "    history.append(round(population, 1))\n",
+        "\n",
+        "print(history)"
+      ],
+      "id": "a5e180b6",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 3. Functions"
+      ],
+      "id": "b496da85"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# Convert temperature from Celsius to Fahrenheit\n",
+        "\n",
+        "def celsius_to_fahrenheit(c):\n",
+        "    return c * 9/5 + 32\n",
+        "\n",
+        "# Test the function\n",
+        "\n",
+        "for temp in [0, 15, 25, 37]:\n",
+        "    print(f\"{temp}°C = {celsius_to_fahrenheit(temp)}°F\")"
+      ],
+      "id": "7317fea2",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## 4. Plotting"
+      ],
+      "id": "116f2b00"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "days = list(range(len(history)))\n",
+        "\n",
+        "plt.plot(days, history, \"o-\")\n",
+        "plt.xlabel(\"Day\")\n",
+        "plt.ylabel(\"Population\")\n",
+        "plt.title(\"Exponential growth\")\n",
+        "plt.show()"
+      ],
+      "id": "6e55d3c1",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "c:\\Users\\87236\\Desktop\\envsci704\\.venv\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
